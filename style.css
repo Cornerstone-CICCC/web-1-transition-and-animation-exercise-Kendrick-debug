@@ -1,0 +1,71 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.circle{
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: circleMove 3s linear infinite;
+
+
+}
+
+.container{
+    background-color: blue;
+}
+
+.circle:hover{
+    opacity: 0;
+    transition: 2s;
+
+}
+
+@keyframes circleMove{
+    0%, 100% {
+        top: 0;
+        left: 0;
+        transform: translateX(0) translateY(0);
+        border-radius: 50%;
+    }
+
+    25%{
+        top:0;
+        left:100%;
+        transform: translateX(-100%) translateY(0);
+        border-radius: 0%;
+    }
+    50%{
+        top: 100%;
+        left: 100%;
+        transform: translateX(-100%) translateY(-100%);
+        border-radius: 50%;
+    }
+
+    75%{
+        top:100%;
+        left:0;
+        transform: translateX(0) translateY(-100%);
+        border-radius: 0;
+    }
+}
+
+.loading{
+    margin: 200px auto;
+    width: 200px;
+    height: 50px;
+    background: black;
+}
+
+.progress{
+    background: green;
+    width: 10%;
+    height: 100%;
+}
